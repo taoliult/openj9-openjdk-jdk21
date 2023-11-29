@@ -695,7 +695,7 @@ public final class RestrictedSecurity {
                     // For each constraint type, algorithm and attributes.
                     Constraint[] constraints = new Constraint[constrArray.length];
 
-                    Boolean allowFlag;
+                    Boolean allowFlag = null;
                     int cNum = 0;
                     for (String constr : constrArray) {
                         String[] input = constr.split(",");
@@ -787,7 +787,7 @@ public final class RestrictedSecurity {
             String type = service.getType();
             String algorithm = service.getAlgorithm();
 
-            boolean cIsAllow;
+            boolean cIsAllow = false;
             for (Constraint constraint : constraints) {
                 cIsAllow = constraint.isAllow;
                 String cType = constraint.type;
