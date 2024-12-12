@@ -23,6 +23,7 @@
 
 /**
  * @test
+ * @run main/othervm InOutBuffers
  * @bug 4925226
  * @summary ensure IllegalArgumentException is thrown if in == out
  * @author Andreas Sterbenz

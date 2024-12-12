@@ -23,6 +23,7 @@
 
 /**
  * @test
+ * @run main/othervm GCMAPI
  * @bug 7031343
  * @summary Provide API changes to support GCM AEAD ciphers
  * @author Brad Wetmore

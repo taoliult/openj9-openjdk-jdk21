@@ -23,6 +23,7 @@
 
 /**
  * @test
+ * @run main/othervm TestGCMWithByteBuffer
  * @bug 8178374
  * @summary Test GCM decryption with various types of input/output
  *     ByteBuffer objects

@@ -23,6 +23,7 @@
 
 /**
  * @test
+ * @run main/othervm ByteBuffersNull
  * @bug 5000980
  * @summary Check NullPointerException for cipherSpi.engineUpdate(x, null)
  */

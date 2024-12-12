@@ -23,6 +23,7 @@
 
 /**
  * @test
+ * @run main/othervm GetMaxAllowed
  * @bug 4807942 7033170
  * @summary Test the Cipher.getMaxAllowedKeyLength(String) and
  * getMaxAllowedParameterSpec(String) methods

@@ -26,14 +26,14 @@
  * @bug 8181386
  * @summary CipherSpi ByteBuffer to byte array conversion fails for
  *          certain data overlap conditions
- * @run main CipherByteBufferOverwriteTest AES/CBC/PKCS5Padding 0 false
- * @run main CipherByteBufferOverwriteTest AES/CBC/PKCS5Padding 0 true
- * @run main CipherByteBufferOverwriteTest AES/CBC/PKCS5Padding 4 false
- * @run main CipherByteBufferOverwriteTest AES/CBC/PKCS5Padding 4 true
- * @run main CipherByteBufferOverwriteTest AES/GCM/NoPadding 0 false
- * @run main CipherByteBufferOverwriteTest AES/GCM/NoPadding 0 true
- * @run main CipherByteBufferOverwriteTest AES/GCM/NoPadding 4 false
- * @run main CipherByteBufferOverwriteTest AES/GCM/NoPadding 4 true
+ * @run main/othervm CipherByteBufferOverwriteTest AES/CBC/PKCS5Padding 0 false
+ * @run main/othervm CipherByteBufferOverwriteTest AES/CBC/PKCS5Padding 0 true
+ * @run main/othervm CipherByteBufferOverwriteTest AES/CBC/PKCS5Padding 4 false
+ * @run main/othervm CipherByteBufferOverwriteTest AES/CBC/PKCS5Padding 4 true
+ * @run main/othervm CipherByteBufferOverwriteTest AES/GCM/NoPadding 0 false
+ * @run main/othervm CipherByteBufferOverwriteTest AES/GCM/NoPadding 0 true
+ * @run main/othervm CipherByteBufferOverwriteTest AES/GCM/NoPadding 4 false
+ * @run main/othervm CipherByteBufferOverwriteTest AES/GCM/NoPadding 4 true
  */
 
 import java.math.BigInteger;
