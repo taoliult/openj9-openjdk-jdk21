@@ -27,8 +27,8 @@
  * @summary Test the Cipher.update/doFinal(ByteBuffer, ByteBuffer) methods
  * @author Andreas Sterbenz
  * @key randomness
- * @run main ByteBuffers DES 8
- * @run main ByteBuffers AES 16
+ * @run main/othervm ByteBuffers DES 8
+ * @run main/othervm ByteBuffers AES 16
  */
 
 import java.util.*;

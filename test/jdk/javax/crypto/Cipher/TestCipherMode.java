@@ -23,6 +23,7 @@
 
 /*
  * @test
+ * @run main/othervm TestCipherMode
  * @bug 4953556 8210838 8248268
  * @summary ensure that IllegalStateException is thrown if the
  * Cipher object is initialized with a wrong mode, e.g. WRAP_MODE
