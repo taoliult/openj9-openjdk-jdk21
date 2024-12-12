@@ -23,6 +23,7 @@
 
 /**
  * @test
+ * @run main/othervm EmptyFinalBuffer
  * @bug 6946830
  * @summary Test the Cipher.doFinal() with 0-length buffer
  * @key randomness

@@ -27,8 +27,8 @@
  * @summary Cipher.doFinal(ByteBuffer,ByteBuffer) fails to
  *     process when in.remaining() == 0
  * @key randomness
- * @run main DirectBBRemaining DES 8
- * @run main DirectBBRemaining AES 16
+ * @run main/othervm DirectBBRemaining DES 8
+ * @run main/othervm DirectBBRemaining AES 16
  */
 
 import java.nio.ByteBuffer;

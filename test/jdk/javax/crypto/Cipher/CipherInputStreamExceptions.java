@@ -23,6 +23,7 @@
 
 /*
  * @test
+ * @run main/othervm CipherInputStreamExceptions
  * @bug 8064546
  * @summary Throw exceptions during reading but not closing of a
  * CipherInputStream:

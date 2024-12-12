@@ -23,6 +23,7 @@
 
 /*
  * @test
+ * @run main/othervm ResetByteBuffer
  * @bug 8261462
  * @summary Verify that after the first doFinal() decryption op, the ByteBuffer
  * is properly set for the second operation.
