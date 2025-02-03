@@ -123,6 +123,17 @@ public class DebugOptions {
                 "-Djava.security.debug=" + params,
                 "DebugOptions"
         );
+
+        // Retrieve standard output
+        String stdout = outputAnalyzer.getOutput();
+        System.out.println("TAO debug - Standard Output:");
+        System.out.println(stdout);
+
+        // Retrieve standard error (if needed)
+        String stderr = outputAnalyzer.getStderr();
+        System.out.println("TAO debug - Standard Error:");
+        System.out.println(stderr);
+
         outputAnalyzer.shouldHaveExitValue(0)
                 .shouldMatch(expected)
                 .shouldNotMatch(notExpected);
