@@ -18,5 +18,6 @@ grant {
   	permission java.lang.RuntimePermission "accessClassInPackage.*";
   	permission java.net.SocketPermission "*:*", 
   		"listen,resolve,accept,connect";
+    permission java.lang.RuntimePermission "loadLibrary.*";
 }; 
 
