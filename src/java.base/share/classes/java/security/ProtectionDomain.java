@@ -451,14 +451,15 @@ public class ProtectionDomain {
      * . SecurityManager is {@code null}
      *
      * . SecurityManager is not {@code null},
-     *          debug is not {@code null},
      *          SecurityManager implementation is in bootclasspath,
      *          Policy implementation is in bootclasspath
      *          (the bootclasspath restrictions avoid recursion)
      *
-     * . SecurityManager is not {@code null},
-     *          debug is {@code null},
-     *          caller has Policy.getPolicy permission
+     * The classloader-based check is always used when a SecurityManager is
+     * present to avoid re-entrant calls to checkPermission() that can occur
+     * when this method is invoked from debug output paths (e.g. the
+     * "failure" debug flag in AccessControlContext), which would cause a
+     * StackOverflowError.
      */
     @SuppressWarnings("removal")
     private static boolean seeAllp() {
@@ -467,18 +468,9 @@ public class ProtectionDomain {
         if (sm == null) {
             return true;
         } else {
-            if (DebugHolder.debug != null) {
-                return sm.getClass().getClassLoader() == null &&
-                        Policy.getPolicyNoCheck().getClass().getClassLoader()
-                                == null;
-            } else {
-                try {
-                    sm.checkPermission(SecurityConstants.GET_POLICY_PERMISSION);
-                    return true;
-                } catch (SecurityException se) {
-                    return false;
-                }
-            }
+            return sm.getClass().getClassLoader() == null &&
+                    Policy.getPolicyNoCheck().getClass().getClassLoader()
+                            == null;
         }
     }
 
