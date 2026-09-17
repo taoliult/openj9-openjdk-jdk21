@@ -7,5 +7,4 @@ grant codeBase "file:${test.classes}/*" {
     //permission javax.security.auth.AuthPermission "modifyPrincipals";
     permission java.lang.RuntimePermission "accessClassInPackage.com.sun.jndi.ldap";
     permission java.lang.RuntimePermission "ldapDnsProvider";
-    permission java.lang.RuntimePermission "accessClassInPackage.sun.security.util";
 };
