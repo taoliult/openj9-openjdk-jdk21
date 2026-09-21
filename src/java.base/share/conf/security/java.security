@@ -67,6 +67,7 @@
 # List of providers and their preference orders (see above):
 #
 security.provider.tbd=com.ibm.crypto.plus.provider.OpenJCEPlusSemeruDefaults
+security.provider.tbd=OpenJCEPlus
 security.provider.tbd=SUN
 security.provider.tbd=SunRsaSign
 security.provider.tbd=SunEC
@@ -85,7 +86,6 @@ security.provider.tbd=SunMSCAPI
 security.provider.tbd=Apple
 #endif
 security.provider.tbd=SunPKCS11
-security.provider.tbd=OpenJCEPlus
 
 #
 # Java Restricted Security Mode
